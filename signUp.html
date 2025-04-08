@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign UP</title>
+</head>
+<body>
+    <form onsubmit="return validate()">
+        <h2>Sign Up</h2>
+        <label for="signUpEmail">Email</label>
+        <input type="email" id="signUpEmail" placeholder="Email"  /><br>
+
+        <label for="signUpPassword">Password:</label>
+        <input type="password" id="signUpPassword" placeholder="Password"  /><br>
+
+        <button type="submit">Signup</button>
+        <p id="msg"></p>
+    </form>
+
+    <script>
+        function validate()
+         {
+            let email = document.getElementById('signUpEmail').value.trim();
+            let password = document.getElementById('signUpPassword').value;
+            let msg = document.getElementById('msg');
+
+            let hasUpper = false;
+            let hasLower = false;
+            let hasSpecial = false;
+            const specialChars = "!@#$%^&*()_+-=[]{}|;:',.<>/?";
+
+            if (email === "")
+            {
+                msg.innerHTML = "Email cannot be empty";
+                msg.style.color = 'red';
+                return false;
+            }
+
+            if (password === "")
+            {
+                msg.innerHTML = "Give Password";
+                msg.style.color = 'red';
+                return false;
+            }
+
+            for (let i = 0; i < password.length; i++) 
+            {
+                let char = password[i];
+                if (char >= 'A' && char <= 'Z') hasUpper = true;
+                else if (char >= 'a' && char <= 'z') hasLower = true;
+                else if (specialChars.includes(char)) hasSpecial = true;
+            }
+
+            if (!hasUpper) 
+            {
+                msg.innerHTML = "Password must include at least one uppercase letter.";
+                msg.style.color = 'red';
+                return false;
+            }
+
+            if (!hasLower) 
+            {
+                msg.innerHTML = "Password must include at least one lowercase letter.";
+                msg.style.color = 'red';
+                return false;
+            }
+
+            if (!hasSpecial) 
+            {
+                msg.innerHTML = "Password must include at least one special character.";
+                msg.style.color = 'red';
+                return false;
+            }
+
+            msg.innerHTML = "Signup successful!";
+            msg.style.color = 'green';
+            return true;
+        }
+    </script>
+</body>
+</html>
