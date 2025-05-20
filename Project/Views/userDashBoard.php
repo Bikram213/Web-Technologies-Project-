@@ -1,7 +1,4 @@
- <?php
-    session_start();
-    if(isset($_SESSION['status'])){
-?> 
+
 
 <!DOCTYPE html>
 <html>
@@ -9,6 +6,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> User Dashboard</title>
+    <link rel="stylesheet" href="userDashboard.css">
+
 </head> 
 <body>
 
@@ -26,10 +25,3 @@
 
 </body>
 </html>
-
- <?php
-    }else{
-        header('location: home.php');
-    }
-
-?> 

@@ -1,4 +1,7 @@
-
+<!-- <?php
+    session_start();
+    if(isset($_SESSION['status'])){
+?> -->
 
 
 
@@ -21,4 +24,9 @@
 
 </html>
 
+<!-- <?php
+    }else{
+        header('location: userLogin.php');
+    }
 
+?> -->

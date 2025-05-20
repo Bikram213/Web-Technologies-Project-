@@ -60,20 +60,24 @@ if (isset($_POST['submit']))
         //     header("Location: ../Views/userDashBoard.php");
         //     exit();
         // } 
-        // else if ($role == "Admin") 
-        // {
-        //     header("Location: adminDashboard.html");
-        //     exit();
-        // }
-
+        // 
      $_SESSION['status'] = true;
-    header(header: 'location: ../Views/home.php');
+    header( 'location: ../Views/home.php');
 
 
-     if ($role == "User") {
+    if ($role == "User") 
+    {
         header("Location: ../Views/userDashBoard.php");
         exit();
     }
+
+    else if ($role == "Admin") 
+    {
+         header("Location: adminDashboard.html");
+        exit();
+    }
+
+    
 
 
 

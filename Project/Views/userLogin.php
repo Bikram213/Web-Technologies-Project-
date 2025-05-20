@@ -3,7 +3,7 @@
     <head>
         <title>Sign Up</title>
           <link rel="stylesheet" href="userLogin.css">
-          <!-- <script src="userLogin.js"></script> -->
+           <script src="userLogin.js"></script> 
 
     </head>
     <body>
