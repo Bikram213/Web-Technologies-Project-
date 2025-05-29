@@ -1,0 +1,49 @@
+/* Apply Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5); /* soft gradient */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userDashboard {
+    background-color: #ffffffcc; /* semi-transparent white */
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.userDashboard h2 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #333;
+}
+
+.userDashboard button {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.userDashboard button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 114, 255, 0.2);
+    background: linear-gradient(45deg, #0072ff, #00c6ff);
+}
